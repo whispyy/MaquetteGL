@@ -29,6 +29,26 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/projeter', {
+        templateUrl: 'views/projeter.html',
+        controller: 'ProjeterCtrl',
+        controllerAs: 'projeter'
+      })
+      .when('/projetermul', {
+        templateUrl: 'views/projetermul.html',
+        controller: 'ProjetermulCtrl',
+        controllerAs: 'projetermul'
+      })
+      .when('/flux', {
+        templateUrl: 'views/flux.html',
+        controller: 'FluxCtrl',
+        controllerAs: 'flux'
+      })
+      .when('/flux', {
+        templateUrl: 'views/flux.html',
+        controller: 'FluxCtrl',
+        controllerAs: 'flux'
+      })
       .otherwise({
         redirectTo: '/'
       });
