@@ -1,0 +1,43 @@
+<div class="jumbotron">
+	<h1>{{msg}}</h1>
+
+	<h2>Paramètre Généraux</h2>
+	<div>
+		Activer scinder l'écran par défaut
+		<input type="checkbox"/>
+		
+	</div>
+	<h2>Mon Compte</h2>
+	<div>
+		<input type="text" placeholder="Identifiant"/><br />
+		<input type="password" placeholder="Mot de passe"/><br />
+		<input type="text" placeholder="Adresse e-mail"/><br />
+	</div>
+	<h2>Mes Réseaux Sociaux</h2>
+	<span class="input-group-addon">Ajouter un compte</span>
+	<table class="table table-hover" ng-if="rse != []">
+		<thead>
+			<tr>
+				<th style="text-align:center">Compte</th>
+				<th style="text-align:center">Type</th>
+				<th style="text-align:center">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in rse">
+				<td>{{x.nomCompte}}</td>
+				<td>{{x.type}}</td>
+				<td><a href="#">Modifier</a> | <a href="#">Supprimer</a></td>
+			</tr>
+		<tbody>
+	</table>
+	<span class="input-group-addon"><a ng-href="#/home" style="text-decoration:none">Retour</a></span>
+	<span class="input-group-addon"><a ng-href="#/home" style="text-decoration:none">Valider</a></span>
+	<br />
+</div>
+
+<style>
+span{
+	cursor: pointer;
+}
+</style>

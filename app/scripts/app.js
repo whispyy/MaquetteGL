@@ -49,6 +49,11 @@ angular
         controller: 'FluxCtrl',
         controllerAs: 'flux'
       })
+      .when('/parametre', {
+        templateUrl: 'views/parametre.html',
+        controller: 'ParametreCtrl',
+        controllerAs: 'parametre'
+      })
       .otherwise({
         redirectTo: '/'
       });

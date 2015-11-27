@@ -11,13 +11,15 @@
   			<span class="input-group-addon" id="basic-addon1" ng-click="next()">Valider</span>
 		</div>
 		<p style="font-size: small">Uniquement admis : PDF, ODT, PPT, PPTX</p>
+		<br />
+		<span class="input-group-addon"><a ng-href="#/home" style="text-decoration:none">Retour</a></span>
 	</div>
 	<div ng-show="step2">
 		<h2>Étape 2</h2>
 		<h3>Choix de l'écran</h3>
 		<br />
 		<p>Vous avez demandé la projection de : {{parcourir.filename}}</p>
-		<select class="form-control">
+		<select class="form-control"> 
 			<option ng-repeat="x in ecrans">{{x.nom}}</option>
 		</select>
 		<br />
@@ -25,3 +27,9 @@
 		<span class="input-group-addon" ng-click="">Valider</span>
 	</div>
 </div>
+
+<style>
+span{
+	cursor: pointer;
+}
+</style>
