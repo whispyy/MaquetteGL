@@ -18,24 +18,21 @@ angular.module('maquetteGlApp')
     $scope.msg ="Projeter";
 
     // gestion étape 1
-    $scope.parcourir={};
-    $scope.parcourir.filename="";
-    $scope.parcourir.ext="";
-    
+    $scope.file;
     // gestion étape 2
 
 
     // étapes avant la projection
-    $scope.step1= true;
-    $scope.step2= false;
+    $scope.step1 = true;
+    $scope.step2 = false;
     $scope.next = function(){
-  		$scope.step1=false;
-  		$scope.step2=true;
-  		//$scope.parcourir.filename=files[0].name;
+  		$scope.step1 =false;
+  		$scope.step2 =true;
+      console.log($scope.file);
     }
    	$scope.back = function(){
-  		$scope.step1=true;
-  		$scope.step2=false;
+  		$scope.step1 = true;
+  		$scope.step2 = false;
     }
 
   });

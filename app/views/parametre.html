@@ -14,7 +14,15 @@
 		<input type="text" placeholder="Adresse e-mail"/><br />
 	</div>
 	<h2>Mes Réseaux Sociaux</h2>
-	<span class="input-group-addon">Ajouter un compte</span>
+	<span class="input-group-addon" ng-click="showaddrse()">Ajouter un compte</span>
+	<div ng-if="booladdrse">
+		<select ng-model="ajoutrse.type">
+			<option>Twitter</option>
+			<option>FaceBook</option>
+		</select>
+		<input type="text" ng-model="ajoutrse.nomCompte" placeholder="nom de compte"/>
+		<input type="submit" value="Ajouter" ng-click="addrse()"/>
+	</div>
 	<table class="table table-hover" ng-if="rse != []">
 		<thead>
 			<tr>
