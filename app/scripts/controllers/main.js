@@ -22,11 +22,6 @@ angular.module('maquetteGlApp')
     $scope.ecrans.push(testE1);
     $scope.ecrans.push(testE2);
 
-    //addEcran a deplacer dans le controller du panneau d'admin
-    $scope.addEcran = function(id,nom){
-    	var monEcran = {'id': id, 'nom': nom};
-    	$scope.ecrans.push(monEcran);
-    };
 
     /*réseau social*/
     $scope.rse=[];

@@ -1,0 +1,33 @@
+<div class="jumbotron">
+	<h1>{{msg}}</h1>
+
+	<h2 ng-click="becran=true">Gérer les écrans</h2>
+	<div ng-if="becran">
+		<p>Liste des écrans a gérer</p>
+		<select class="form-control" ng-model="idnom">
+			<!--<option>Id | Nom</option>-->
+			<option ng-repeat="x in ecrans">{{x.id}} | {{x.nom}}</option>
+		</select>
+		<span class="input-group-addon" ng-click="modifyEcran(idnom,'TestEcran')">Modifier l'écran sélectionné</span>
+		<span class="input-group-addon" ng-click="becranadd=true">Ajouter un écran</span>
+		<br />
+		<div ng-if="becranadd">
+			<input type="text" ng-model="ide" placeholder="identifiant de l'écran"/>
+			<input type="text" ng-model="nome" placeholder="nom associé à l'écran"/>
+			<br /><br />
+			<span class="input-group-addon" ng-click="addEcran(ide,nome)">Valider</span>
+		</div>
+	</div>
+	<h2>Gérer les groupes d'écrans</h2>
+
+	<h2>Gérer les utilisateurs</h2>
+
+</div>
+<style>
+h2,span{
+	cursor: pointer;
+}
+option{
+	text-align: justify;
+}
+</style>

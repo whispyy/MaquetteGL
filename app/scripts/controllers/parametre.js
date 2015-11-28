@@ -15,7 +15,7 @@ angular.module('maquetteGlApp')
       'Karma'
     ];
 
-    $scope.msg="Paramètre";
+    $scope.msg='Paramètre';
 
 
     /*ajouter un réseau social*/
@@ -23,15 +23,15 @@ angular.module('maquetteGlApp')
     $scope.booladdrse = false;
     $scope.showaddrse = function(){
       $scope.booladdrse = true;
-    }
+    };
     //variable d'ajout
-    $scope.ajoutrse = [];
-    $scope.ajoutrse.type = "";
-    $scope.ajoutrse.nomCompte = "";
-    //fonction d'ajout a perfectionner car n'ajoute qu'une fois
-    $scope.addrse = function(){
-      $scope.ajoutrse.id = $scope.rse.length;
-      $scope.rse.push($scope.ajoutrse);
-      console.log("ajouté compte réseau social!");
-    }
+    $scope.type = '';
+    $scope.nomCompte = '';
+    //fonction d'ajout
+    $scope.addrse2= function(t,n){
+      var rse = {'id': $scope.rse.length,
+                 'type': t,
+                 'nomCompte' : n};
+      $scope.rse.push(rse);
+    };
   });

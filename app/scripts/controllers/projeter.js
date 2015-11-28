@@ -15,10 +15,10 @@ angular.module('maquetteGlApp')
       'Karma'
     ];
 
-    $scope.msg ="Projeter";
+    $scope.msg ='Projeter';
 
     // gestion étape 1
-    $scope.file;
+    $scope.file='';
     // gestion étape 2
 
 
@@ -29,10 +29,10 @@ angular.module('maquetteGlApp')
   		$scope.step1 =false;
   		$scope.step2 =true;
       console.log($scope.file);
-    }
+    };
    	$scope.back = function(){
   		$scope.step1 = true;
   		$scope.step2 = false;
-    }
+    };
 
   });

@@ -8,10 +8,12 @@
  * Controller of the maquetteGlApp
  */
 angular.module('maquetteGlApp')
-  .controller('FluxCtrl', function () {
+  .controller('FluxCtrl', function ($scope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    $scope.msg = 'Afficher Flux';
   });
