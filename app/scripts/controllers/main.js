@@ -17,11 +17,15 @@ angular.module('maquetteGlApp')
 
     /*écrans*/
     $scope.ecrans=[];
-    var testE1={'id':1,'nom': "Test Ecran1"};
-    var testE2={'id':2,'nom': "Test Ecran2"};
+    var testE1={'id':123456,'nom': "Test Ecran1"};
+    var testE2={'id':213456,'nom': "Test Ecran2"};
     $scope.ecrans.push(testE1);
     $scope.ecrans.push(testE2);
 
+    /*groupe d'écrans*/
+    $scope.groupeEcran
+    var testG1={'id':1,'nom':"Groupe Ecran 1", 'ecrans'=['123456','213456']};
+    $scope.groupeEcran.push(testG1);
 
     /*réseau social*/
     $scope.rse=[];
