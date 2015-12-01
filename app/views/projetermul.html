@@ -1,1 +1,35 @@
-<p>This is the projetermul view.</p>
+<div class="jumbotron">
+	<h1>{{msg}}</h1>
+	<br />
+	<div ng-show="step1">
+		<h2>Étape 1</h2>
+		<h3>Choix de la présentation</h3>
+		<br />
+		<p>Veuillez importer votre présentation ci-dessous et cliquer sur valider.</p>
+		<span class="btn btn-default btn-file">
+			<input type="file" file-model="file"/>
+		</span>
+		<p style="font-size: small">Uniquement admis : PDF, ODT, PPT, PPTX</p>
+		<br />
+		<span class="input-group-addon"><a ng-href="#/home" style="text-decoration:none">Retour</a></span>
+		<span class="input-group-addon" ng-click="next()">Valider</span>
+	</div>
+	<div ng-show="step2">
+		<h2>Étape 2</h2>
+		<h3>Choix des écrans</h3>
+		<br />
+		<p>Vous avez demandé la projection de : {{file}}</p>
+		<select class="form-control"> 
+			<option ng-repeat="x in ecrans">{{x.nom}}</option>
+		</select>
+		<br />
+		<span class="input-group-addon" ng-click="back()">Retour</span>
+		<span class="input-group-addon" ng-click="">Valider</span>
+	</div>
+</div>
+
+<style>
+span{
+	cursor: pointer;
+}
+</style>
