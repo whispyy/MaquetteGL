@@ -23,9 +23,11 @@ angular.module('maquetteGlApp')
     $scope.ecrans.push(testE2);
 
     /*groupe d'écrans*/
-    $scope.groupeEcran
-    var testG1={'id':1,'nom':"Groupe Ecran 1", 'ecrans'=['123456','213456']};
-    $scope.groupeEcran.push(testG1);
+    $scope.groupeEcran=[];
+    var testG11={'id':1,'nom':"Groupe Ecran 1",'ecrans':123456};
+    var testG12={'id':2,'nom':"Groupe Ecran 1",'ecrans':213456};
+    $scope.groupeEcran.push(testG11);
+    $scope.groupeEcran.push(testG12);
 
     /*réseau social*/
     $scope.rse=[];
