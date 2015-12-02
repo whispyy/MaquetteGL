@@ -16,4 +16,7 @@ angular.module('maquetteGlApp')
     ];
 
     $scope.msg = 'Afficher Flux';
+
+
+    
   });

@@ -1,4 +1,33 @@
 <div class="jumbotron">
 	<h1>{{msg}}</h1>
-	
+	<h2>Étape 1</h2>
+	<div id="step1">
+		<h3>Selectionner un réseau social</h3>
+		<table class="table table-hover" ng-if="rse != []">
+			<thead>
+				<tr>
+					<th style="text-align:center">Compte</th>
+					<th style="text-align:center">Type</th>
+					<th style="text-align:center">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in rse">
+					<td>{{x.nomCompte}}</td>
+					<td>{{x.type}}</td>
+					<td><a ng-href="#/flux2">Selectionner</a></td>
+				</tr>
+			<tbody>
+		</table>
+	</div>
 </div>
+
+
+<style>
+#step1{
+	background: white;
+	border: solid 1px lightgrey;
+	border-radius: 4px;
+	padding: 5px;
+}
+</style>
