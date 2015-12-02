@@ -17,6 +17,11 @@ angular.module('maquetteGlApp')
 
     $scope.msg = 'Afficher Flux';
 
+    $scope.hashtag='';
 
-    
+    $scope.positions= ['haut-gauche',
+    				   'haut-droite',
+    				   'bas-gauche',
+    				   'bas-droite'];
+
   });

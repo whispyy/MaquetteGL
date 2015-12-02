@@ -1,1 +1,40 @@
-<p>This is the flux2 view.</p>
+<div class="jumbotron">
+	<h1>{{msg}}</h1>
+	<h2>Étape 2</h2>
+	<div id="step2">
+		<h3>Entrer un mot-clé</h3>
+      	<input type="text" class="form-control" placeholder="Mot clé, hashtags, ... etc" ng-model="hashtag">
+      	<p style="font-size: small">
+      		Les messages de vos collaborateurs contenant ce mots clés seront projetés
+      	</p>
+      	<br />
+      	<h3>Selectionner la position de la projection</h3>
+      	<ul class="checkbox">
+      		<li class="checkbox-inline"  ng-repeat="x in positions">
+				<input type="checkbox" value=""/>
+				{{x}}
+			</li>
+      	</ul>
+      	<br />
+      	<span class="input-group-addon"><a  ng-href="#/flux">Retour</a></span>
+		<span class="input-group-addon"><a ng-href="#">Valider</a></span>
+	</div>
+</div>
+
+
+<style>
+#step2{
+	background: white;
+	border: solid 1px lightgrey;
+	border-radius: 4px;
+	padding: 5px;
+}
+.checkbox-inline{
+	border-radius: 4px;
+	border: solid 1px lightgrey;
+
+	margin-right: 5px;
+	margin-left: 5px;
+	text-align: center;
+}
+</style>

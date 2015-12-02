@@ -44,8 +44,8 @@ angular
         controller: 'FluxCtrl',
         controllerAs: 'flux'
       })
-      .when('/flux', {
-        templateUrl: 'views/flux.html',
+      .when('/flux2', {
+        templateUrl: 'views/flux2.html',
         controller: 'FluxCtrl',
         controllerAs: 'flux'
       })
