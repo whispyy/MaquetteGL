@@ -18,8 +18,10 @@ angular.module('maquetteGlApp')
     $scope.msg ='Projeter';
 
     // gestion étape 1
-    $scope.file='';
+    $scope.idnum='';
     // gestion étape 2
+    $scope.file='';
+
 
 
     // étapes avant la projection

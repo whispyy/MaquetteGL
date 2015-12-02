@@ -3,25 +3,37 @@
 	<br />
 	<div ng-show="step1">
 		<h2>Étape 1</h2>
-		<h3>Choix de la présentation</h3>
+		<h3>Choix des écrans</h3>
 		<br />
-		<p>Veuillez importer votre présentation ci-dessous et cliquer sur valider.</p>
-		<span class="btn btn-default btn-file">
-			<input type="file" file-model="file"/>
-		</span>
-		<p style="font-size: small">Uniquement admis : PDF, ODT, PPT, PPTX</p>
+		<ul class="checkbox">
+			<h4>Selectionner des groupes d'écrans</h4>
+			<li class="checkbox-inline"  ng-repeat="x in groupeEcran">
+				<input type="checkbox" value=""/>
+				{{x.nom}}
+			</li>
+			<br /><br />
+		</ul>
+		<ul class="checkbox">
+			<h4>Selectionner des écrans supplémentaires</h4>
+			<li class="checkbox-inline"  ng-repeat="x in ecrans">
+				<input type="checkbox" value=""/>
+				{{x.nom}}
+			</li>
+			<br /><br />
+		</ul>
 		<br />
 		<span class="input-group-addon"><a ng-href="#/home" style="text-decoration:none">Retour</a></span>
 		<span class="input-group-addon" ng-click="next()">Valider</span>
 	</div>
 	<div ng-show="step2">
 		<h2>Étape 2</h2>
-		<h3>Choix des écrans</h3>
+		<h3>Choix de la présentation</h3>
 		<br />
-		<p>Vous avez demandé la projection de : {{file}}</p>
-		<select class="form-control"> 
-			<option ng-repeat="x in ecrans">{{x.nom}}</option>
-		</select>
+		<p>Veuillez importer votre présentation ci-dessous et cliquer sur valider.</p>
+		<span class="btn btn-default btn-file">
+			<input type="file" fileread="file"/>
+		</span>
+		<p style="font-size: small">Uniquement admis : PDF, ODT, PPT, PPTX</p>
 		<br />
 		<span class="input-group-addon" ng-click="back()">Retour</span>
 		<span class="input-group-addon" ng-click="">Valider</span>
@@ -29,6 +41,19 @@
 </div>
 
 <style>
+.checkbox{
+	background: white;
+	border-radius:4px;
+	border: solid 1px lightgrey;
+}
+.checkbox-inline{
+	border-radius: 4px;
+	border: solid 1px lightgrey;
+
+	margin-right: 5px;
+	margin-left: 5px;
+	text-align: center;
+}
 span{
 	cursor: pointer;
 }
