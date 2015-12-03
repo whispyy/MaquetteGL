@@ -8,13 +8,17 @@
       		Les messages de vos collaborateurs contenant ce mots clés seront projetés
       	</p>
       	<br />
-      	<h3>Selectionner la position de la projection</h3>
+      	<div class="separator"></div>
+      	<h3>Selectionner la position d'affichage</h3>
       	<ul class="checkbox">
       		<li class="checkbox-inline"  ng-repeat="x in positions">
 				<input type="checkbox" value=""/>
 				{{x}}
 			</li>
       	</ul>
+      	<p style="font-size: small">
+      		Les messages apparaitront sous la forme d'un petit encadré dans la position choisie ci-dessus sur tous les écrans connectés.
+      	</p>
       	<br />
       	<span class="input-group-addon"><a  ng-href="#/flux">Retour</a></span>
 		<span class="input-group-addon"><a ng-href="#">Valider</a></span>
