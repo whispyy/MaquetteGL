@@ -7,18 +7,19 @@
  * # fileread
  */
 angular.module('maquetteGlApp')
-  .directive('fileread', function () {
-    return {
-    	scope: {
-    		fileread: '='
-    	},
-    	link: (scope, element, attrs) => {
-    		element.bind('change', function(changeEvent){
-    			scope.$apply(function(){
-    				scope.fileread = changeEvent.target.file[0].path;
-    				//.name
-    			});
-    		});
-    	};
-      };
-  });
+.directive('fileread', () => {
+  return {
+    scope: {
+      fileread: '=',
+      fnt: '&'
+    },
+    link: (scope, element, attrs) => {
+      element.bind('change', function(changeEvent) {
+        scope.$apply(function() {
+          scope.fileread = changeEvent.target.files[0].path;
+          scope.fnt({file: scope.fileread});
+        });
+      });
+    }
+  }
+})

@@ -35,4 +35,27 @@ angular.module('maquetteGlApp')
     	$scope.ide= id;
     	$scope.nome= nom;
     };
+
+    /*Gérer groupe écran*/
+    $scope.bgecran=false;
+    $scope.bgecranadd=false;
+
+    //ajout groupe ecran
+    $scope.idg='';
+    $scope.nomg='';
+    $scope.ecrang='';
+    $scope.addGecran = function(id,nom,ecran){
+        var monGecran = {'id': id, 'nom': nom,'ecrans':ecran};
+        $scope.groupeEcran.push(monGecran);
+    };
+
+    /*Gérer utilisateurs*/
+    $scope.buser=false;
+    $scope.buseradd=false;
+
+    //ajout user
+    $scope.useradd=function(grade,nom){
+        var userA ={'id':42, 'nom': nom, 'password':'default','grade':grade};
+        $scope.compte.push(userA);
+    };
   });

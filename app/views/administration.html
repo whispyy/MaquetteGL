@@ -3,7 +3,7 @@
 
 	<h2 ng-click="becran=true">Gérer les écrans</h2>
 	<div ng-if="becran">
-		<p>Liste des écrans a gérer</p>
+		<p>Liste des écrans à gérer</p>
 		<select class="form-control" ng-model="idnom">
 			<!--<option>Id | Nom</option>-->
 			<option ng-repeat="x in ecrans">{{x.id}} | {{x.nom}}</option>
@@ -18,10 +18,51 @@
 			<span class="input-group-addon" ng-click="addEcran(ide,nome)">Valider</span>
 		</div>
 	</div>
-	<h2>Gérer les groupes d'écrans</h2>
-
-	<h2>Gérer les utilisateurs</h2>
-
+	<h2 ng-click="bgecran=true">Gérer les groupes d'écrans</h2>
+	<div ng-if="bgecran">
+		<p>Liste des groupes d'écran à gérer</p>
+		<select class="form-control" ng-model="idnom">
+			<!--<option>Id | Nom</option>-->
+			<option ng-repeat="x in groupeEcran">{{x.id}} | {{x.nom}}</option>
+		</select>
+		<span class="input-group-addon" ng-click="addGecran(idg,nomg,ecrang)">Modifier le groupe sélectionné</span>
+		<span class="input-group-addon" ng-click="bgecranadd=true">Ajouter un groupe</span>
+		<br />
+		<div ng-if="bgecranadd">
+			<input type="text" ng-model="idg" placeholder="identifiant du groupe"/>
+			<input type="text" ng-model="nomg" placeholder="nom du groupe"/>
+			<input type="text" ng-model="ecrang" placeholder="écran à associer au groupe"/>
+			<br /><br />
+			<span class="input-group-addon" ng-click="addGecran(idg,nomg,ecrang)">Valider</span>
+		</div>
+	</div>
+	<h2 ng-click="buser=true">Gérer les utilisateurs</h2>
+	<div ng-if="buser">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th style="text-align:center">Grade</th>
+					<th style="text-align:center">Nom</th>
+					<th style="text-align:center">Mot de passe</th>
+					<th style="text-align:center">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in compte">
+					<td>{{x.grade}}</td>
+					<td>{{x.nom}}</td>
+					<td><a ng-href="#/">Modifier</a></td>
+					<td><a ng-href="#/">Supprimer</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<span class="input-group-addon" ng-click="buseradd=true">Ajouter un utilisateur</span>
+		<div ng-if="buseradd">
+			<input type="text" ng-model="gradeu" placeholder="grade de l'utilisateur"/>
+			<input type="text" ng-model="nomu" placeholder="nom de l'utilisateur"/>
+			<span class="input-group-addon" ng-click="useradd(gradeu,nomu)">Valider</span>
+		</div>
+	</div>
 </div>
 <style>
 h2,span{
