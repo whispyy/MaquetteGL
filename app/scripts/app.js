@@ -59,6 +59,11 @@ angular
         controller: 'AdministrationCtrl',
         controllerAs: 'administration'
       })
+      .when('/connexion', {
+        templateUrl: 'views/connexion.html',
+        controller: 'ConnexionCtrl',
+        controllerAs: 'connexion'
+      })
       .otherwise({
         redirectTo: '/'
       });

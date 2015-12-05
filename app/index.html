@@ -25,6 +25,7 @@
     <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="../bower_components/angular-touch/angular-touch.js"></script>
     <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!--fin deploiement perso-->
   </head>
   <body ng-app="maquetteGlApp" ng-controller="MainCtrl">
@@ -54,6 +55,9 @@
               <li class="active"><a href="#/">Home</a></li>
               <li><a ng-href="#/about">Informations</a></li>
             </ul>
+            <div class="nav navbar-right conn">
+             <a ng-href="#/connexion">Connexion</a>
+            </div>
           </div>
         </div>
       </div>
@@ -105,6 +109,7 @@
         <script src="scripts/controllers/parametre.js"></script>
         <script src="scripts/controllers/administration.js"></script>
         <script src="scripts/directives/fileread.js"></script>
+        <script src="scripts/controllers/connexion.js"></script>
         <!-- endbuild -->
 </body>
 </html>
@@ -117,4 +122,19 @@
   border: solid 1px lightgrey;
 }
 
+.conn{
+    margin-top:15px;
+}
+.conn a{
+  border: solid 1px lightgrey;
+  border-radius: 4px;
+  background: #5280B4;
+  text-decoration: none;
+  padding: 5px;
+  color: white;
+}
+.conn a:hover{
+  color: #EFEFEF;
+  background: #67a0e1;
+}
 </style>
