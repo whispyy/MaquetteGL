@@ -64,6 +64,11 @@ angular
         controller: 'ConnexionCtrl',
         controllerAs: 'connexion'
       })
+      .when('/simulation', {
+        templateUrl: 'views/simulation.html',
+        controller: 'SimulationCtrl',
+        controllerAs: 'simulation'
+      })
       .otherwise({
         redirectTo: '/'
       });

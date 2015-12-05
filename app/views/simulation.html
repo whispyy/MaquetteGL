@@ -1,0 +1,42 @@
+<div class="jumbotron">
+	<h1>{{msg}}</h1>
+	<div class="menucontextuel">
+		<h3 ng-click="bmc=true">Menu Contextuel</h3>
+		<ul ng-if="bmc">
+			<li>
+				<input type="checkbox"/>Activer la scission de l'écran
+			</li>
+			<li>
+				Annoter l'écran
+			</li>
+		</ul>
+	</div>
+	<div class="screen"></div>
+	<br />
+	<div class="btnjf"><a ng-href="#/home" style="text-decoration:none">Quitter la présentation</a></div>
+</div>
+<style>
+.screen{
+	margin: auto;
+	width: 350px;
+	height: 350px;
+	background: black;
+}
+
+.menucontextuel h3{
+	border: solid 1px lightgrey;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.menucontextuel li{
+	border: solid 1px lightgrey;
+	border-radius: 4px;
+	cursor: pointer;
+	list-style: none;
+}
+.btnjf{
+	border: solid 1px lightgrey;
+	border-radius: 4px;
+	cursor: pointer;
+}
+</style>
