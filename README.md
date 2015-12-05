@@ -1,9 +1,21 @@
 # MaquetteGL
 ## Durand & Amara & Assaoui & Leclercq
 
+## Lancement
 
+Nous avons déployés l'application. Celle-ci peut alors fonctionner de façon autonome,
+Pour lancer la maquette depuis un terminal linux disposant du navigateur firefox :
+	`cd app`
+	`firefox index.html`
 
-##Install
+## Architecture de la maquette
+
+Les différentes pages se situent dans app/views.
+La définitions des routes dans scripts/app.js
+Les controllers sont dans scripts/controllers
+Les directives sont dans scripts/directives.
+
+## Install
 
 Installation :
     `npm install && bower install`
